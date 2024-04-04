@@ -11,7 +11,7 @@ const Order = () => {
   useEffect(()=>{
 
     const fetchData = async()=>{
-        const response = await axios.get("http://localhost:8000/api/getall");
+        const response = await axios.get("https://order-sheet-9m6c.onrender.com/api/getall");
         setOrders(response.data);
     }
 
@@ -20,7 +20,7 @@ const Order = () => {
   },[])
 
   const deleteOrder = async(orderId) =>{
-      await axios.delete(`http://localhost:8000/api/delete/${orderId}`)
+      await axios.delete(`https://order-sheet-9m6c.onrender.com/api/delete/${orderId}`)
       .then((respones)=>{
         setOrders((prevOrder)=> prevOrder.filter((order)=> order._id !== orderId))
         toast.success(respones.data.msg, {position: 'top-right'})

@@ -26,7 +26,7 @@ const Add = () => {
 
   const submitForm = async(e) =>{
     e.preventDefault();
-    await axios.post("http://localhost:8000/api/create", order)
+    await axios.post("https://order-sheet-9m6c.onrender.com/api/create", order)
     .then((response)=>{
        toast.success(response.data.msg, {position:"top-right"})
        navigate("/")

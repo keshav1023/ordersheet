@@ -27,7 +27,7 @@ const Edit = () => {
  }
 
  useEffect(()=>{
-    axios.get(`http://localhost:8000/api/getone/${id}`)
+    axios.get(`https://order-sheet-9m6c.onrender.com/api/getone/${id}`)
     .then((response)=>{
         setUser(response.data)
     })
@@ -39,7 +39,7 @@ const Edit = () => {
 
  const submitForm = async(e)=>{
     e.preventDefault();
-    await axios.put(`http://localhost:8000/api/update/${id}`, order)
+    await axios.put(`https://order-sheet-9m6c.onrender.com/api/update/${id}`, order)
     .then((response)=>{
        toast.success(response.data.msg, {position:"top-right"})
        navigate("/")
