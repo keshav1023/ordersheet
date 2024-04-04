@@ -1,0 +1,22 @@
+#header {
+font-size: 30px;
+font-weight: 800;
+font-style: normal;
+text-align: center;
+padding-top: 15px;
+padding-bottom: 10px;
+color: rgb(246, 232, 73);
+background-color: rgb(101, 131, 221);
+width: 300px;
+margin-left: 550px;
+margin-top: 10px;
+}
+page{
+    background-color: black;
+}
+#logo{
+    height: 8%;
+    width: 8%;
+    border-radius: 15px;
+    
+}
